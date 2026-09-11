@@ -1,0 +1,16 @@
+PUBLIC RELEASE — GHANA SITE PLAN PLOTTER
+
+I am pleased to share Ghana Site Plan Plotter, a surveying and site-plan support tool I developed to make coordinate-based plotting and site-plan processing easier.
+
+The tool supports multiple coordinate points, area and perimeter calculations, bearings and distances, CSV/Excel export, DXF export, KML/Google Earth export, and online satellite/map checking.
+
+Developed by Lewis Baah
+© 2026 Lewis Baah. All Rights Reserved.
+
+I am making this tool available to surveyors, geomatics professionals, students, colleagues and anyone who may find it useful.
+
+Please retain the developer name and copyright notice when sharing or republishing the software.
+
+Public project link: [PASTE YOUR GITHUB LINK HERE]
+
+#Ghana #Surveying #Geomatics #GIS #LandSurveying #SitePlan #Engineering #GhanaSitePlanPlotter
