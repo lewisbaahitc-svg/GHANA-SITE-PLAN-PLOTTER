@@ -20,11 +20,11 @@ body{font-family:Arial;margin:0;background:#eef2f5;color:#17222d}header{backgrou
 </section>
 <section class="card"><div class="stats"><div class="stat">Area<b id="a">—</b>m²</div><div class="stat">Perimeter<b id="p">—</b>m</div><div class="stat">Acres<b id="ac">—</b></div></div>
 <div id="msg">Ready.</div><div id="err" class="error"></div>
-<div class="tabs"><button onclick="showPlot()">DRAWING</button><button class="mapbtn" onclick="showMap('map')">SATELLITE / MAP</button></div>
+<div class="tabs"><button onclick="showPlot()">DRAWING</button><button class="mapbtn" onclick="showMap('map')">🛰️ CHECK PLOT ON SATELLITE</button></div>
 <div class="card" style="margin-bottom:10px;background:#f4f8fb;border:2px solid #17324d">
-  <b>🛰️ OPEN SATELLITE VIEW</b>
-  <div class="small" style="margin-top:5px">If the built-in satellite map is slow or unstable, use this button to open the location directly in Google Maps satellite view.</div>
-  <button class="green" onclick="openGoogleSatellite()">OPEN SATELLITE IN GOOGLE MAPS</button>
+  <b>🛰️ CHECK THIS PLOT ON SATELLITE</b>
+  <div class="small" style="margin-top:5px">Click below to see the plotted land boundary on satellite imagery. The map automatically zooms to the exact plotted area and shows the corner points.</div>
+  <button class="green" onclick="showMap('map')">📍 SHOW THIS PLOT ON SATELLITE</button><button onclick="openGoogleSatellite()">OPEN LOCATION IN GOOGLE MAPS</button>
 </div>
 <svg id="plot" viewBox="0 0 1000 430"></svg><div id="map"></div><div class="small" style="margin-top:6px">Satellite view requires internet. If satellite tiles do not load on your network, choose <b>Street Map</b> from the layer switcher.</div>
 <h3>Boundary Computation</h3><table style="width:100%;border-collapse:collapse;font-size:12px"><thead><tr><th style="border:1px solid #ccd;padding:5px">Line</th><th style="border:1px solid #ccd;padding:5px">Distance m</th><th style="border:1px solid #ccd;padding:5px">Bearing</th><th style="border:1px solid #ccd;padding:5px">ΔX</th><th style="border:1px solid #ccd;padding:5px">ΔY</th></tr></thead><tbody id="rows"></tbody></table>
