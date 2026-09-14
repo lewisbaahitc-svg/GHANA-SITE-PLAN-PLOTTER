@@ -12,3 +12,7 @@ This build keeps the approved Ghana Site Plan Plotter interface and adds:
 Contour lines are interpolated from the supplied spot heights. They are intended for visualization/planning and should not be treated as a survey-grade terrain model unless the elevation data and control are survey-grade.
 
 Ghana Metre Grid reference: EPSG:25000. Ghana War Office reference: EPSG:2136. Verify the transformation/control used by the responsible survey authority before official cadastral work.
+
+
+## Coordinate Converter
+The public version includes a separate Feet ↔ Metres coordinate converter supporting up to 100 X/Y coordinate rows. It uses the official Gold Coast foot factor (0.304799710181509 m per foot) and does not alter the main plot until the user enters the converted values there.
