@@ -1,4 +1,4 @@
-# Ghana Site Plan Plotter — V15 Update
+# Ghana Site Plan Plotter 
 
 This build keeps the approved Ghana Site Plan Plotter interface and adds:
 
