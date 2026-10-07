@@ -29,3 +29,5 @@ The coordinate entry panel includes phone GPS capture. GET MY LOCATION reads WGS
 - KML/WGS84 conversion was corrected by using proper geocentric datum transformation calculations and correct ellipsoid eccentricity formulas for the Ghana Metre Grid and War Office workflows.
 - KML contains the boundary and survey points in WGS84 with ground-clamped altitude for Google Earth.
 - The tool remains a preliminary mapping/engineering aid; official cadastral work should use approved survey control and transformations.
+
+V21 UI update: the application is arranged into three pages — Plot & Compute, Field GPS & Converter, and Maps, Tools & Export. The visual theme uses a warm red/burgundy professional accent, with larger desktop/laptop controls while retaining a mobile-friendly layout. Existing coordinate, GPS, converter, contour, map, KML, DXF and report functions are retained.

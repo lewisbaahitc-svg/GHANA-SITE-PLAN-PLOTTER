@@ -7,11 +7,41 @@ body{font-family:Arial;margin:0;background:#eef2f5;color:#17222d}header{backgrou
 .converterbox{margin-top:10px;border:2px solid #617587;border-radius:9px;padding:10px;background:#f8fafc}.convertertitle{font-size:15px;font-weight:800;color:#17324d;margin-bottom:4px}.convertercontrols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px}.convwrap{max-height:300px;overflow:auto;margin-top:8px;border:1px solid #d7dde2;border-radius:6px}.convtable{width:100%;min-width:650px;border-collapse:collapse;font-size:12px}.convtable th{position:sticky;top:0;background:#617587;color:#fff;padding:7px;text-align:center;z-index:2}.convtable td{border:1px solid #d7dde2;padding:4px}.convtable input{margin:0;padding:7px;width:100%;min-width:110px;font-size:13px;box-sizing:border-box}.convtable td:first-child{text-align:center;font-weight:bold;background:#f4f7f9;width:55px}@media(max-width:900px){.convertercontrols{grid-template-columns:1fr 1fr}.convertercontrols>div:first-child{grid-column:1/-1}}
 
 .pageTabs{display:flex;gap:8px;max-width:1600px;margin:12px auto 0;padding:0 16px}.pageTabs button{margin:0;width:auto;padding:11px 18px}.pageTabs button.active{background:#287a45}.page{display:none}.page.active{display:block}main{display:block;max-width:1600px;padding:14px 16px;margin:auto}.wideGrid,.resultsGrid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(330px,.75fr);gap:14px}.sectionHead{font-size:16px;font-weight:800;color:#17324d;margin-bottom:8px}.settingsGrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:10px}.quickPts{display:flex;gap:6px;margin-top:7px}.quickPts button{width:auto;margin:0;padding:7px 12px}.coordhint{font-size:11px;color:#65737e;margin:7px 0}.coordwrap{max-height:470px;overflow:auto;margin-top:8px;border:1px solid #bfcbd4;border-radius:6px}.entrynote{margin-top:6px}.actionStrip{display:grid;grid-template-columns:1.1fr 1fr 1.25fr 1fr;gap:7px;margin-top:8px}.actionStrip button,.fileBtn{margin:0}.fileBtn{display:flex;align-items:center;justify-content:center;background:#617587;color:#fff;border-radius:5px;font-weight:bold;padding:9px;cursor:pointer;box-sizing:border-box}.fileBtn input{display:none}.gpsIntro{font-size:12px;line-height:1.45;color:#4f5f6b}.statusBox{margin-top:8px;padding:9px;background:#eef7f0;border:1px solid #b8d7bf;border-radius:6px;font-size:11px}.fieldSteps{margin-top:12px;padding:10px;background:#f4f8fb;border-radius:7px;font-size:12px;line-height:1.7}.successMsg{margin:8px 0;padding:8px;background:#eef7f0;border-radius:5px;font-size:12px}.drawingTools{padding:10px;background:#f4f8fb;border:1px solid #d7e0e7;border-radius:7px;margin-bottom:8px}.drawingTools button{display:inline-block;width:auto;margin-right:6px}.drawingNote{margin-top:6px}.tableScroll{overflow:auto}.compTable{width:100%;border-collapse:collapse;font-size:12px}.compTable th,.compTable td{border:1px solid #ccd;padding:6px;text-align:center}.compTable th{background:#edf3f7}.toolbox{padding-bottom:8px}.exportbox{margin-top:10px;padding:10px;background:#f4f8fb;border:1px solid #d7e0e7;border-radius:7px}.exportbox button{margin-top:6px}.converterActions{display:grid;grid-template-columns:1fr 1.5fr 1fr 1fr;gap:6px}.converterActions button{margin-top:6px}.coordtable th:nth-child(1),.coordtable td:nth-child(1){width:58px;min-width:58px}.coordtable th:nth-child(2),.coordtable td:nth-child(2){width:185px;min-width:185px}.coordtable th:nth-child(3),.coordtable td:nth-child(3){width:185px;min-width:185px}.coordtable th:nth-child(4),.coordtable td:nth-child(4){width:82px;min-width:82px}.coordtable input{min-width:165px}.converterbox,.contourbox{margin-top:10px}.drawingcard{margin:0}.satellitePage{display:none;position:fixed;inset:0;background:rgba(0,0,0,.62);z-index:5000;padding:18px;box-sizing:border-box;align-items:center;justify-content:center}.satellitePage.open{display:flex}.satelliteBox{background:#fff;width:min(1200px,96vw);height:min(82vh,760px);border-radius:12px;box-shadow:0 8px 30px #0006;padding:12px;box-sizing:border-box;display:flex;flex-direction:column}.satelliteHead{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:8px}.closeSat{width:auto;margin:0;background:#555;padding:8px 12px}.satellitePage #map{flex:1;min-height:320px}@media(max-width:1000px){.wideGrid,.resultsGrid{grid-template-columns:1fr}.settingsGrid{grid-template-columns:1fr 1fr}.actionStrip{grid-template-columns:1fr 1fr}.converterActions{grid-template-columns:1fr 1fr}}@media(max-width:600px){.pageTabs{padding:0 8px}.pageTabs button{font-size:11px;padding:10px 8px}.settingsGrid{grid-template-columns:1fr}.actionStrip{grid-template-columns:1fr}.coordwrap{max-height:none}.convertercontrols{grid-template-columns:1fr}.converterActions{grid-template-columns:1fr}.drawingTools button{width:100%;margin-right:0}.gpscontrols{grid-template-columns:1fr}}
+
+/* V21 visual refresh */
+:root{--hot:#b5122f;--hot2:#e12b45;--hotDark:#7f0b20;--cream:#fff8f8;--ink:#2b2226;--line:#ead4d8}
+body{font-family:Arial,Helvetica,sans-serif;background:linear-gradient(135deg,#fff7f8 0%,#f6f0f1 48%,#fff 100%);color:var(--ink)}
+header{background:linear-gradient(120deg,var(--hotDark),var(--hot),#d51f3b);padding:20px 24px;box-shadow:0 4px 16px #7f0b2030}
+header h2{font-size:24px;letter-spacing:.2px}
+.pageTabs{max-width:1600px;gap:10px;margin:14px auto 0;padding:0 18px;position:sticky;top:0;z-index:100;background:#fff8f9cc;backdrop-filter:blur(8px)}
+.pageTabs button{background:#8f1830;color:#fff;border-radius:9px;padding:14px 22px;font-size:14px;min-height:48px;box-shadow:0 2px 7px #7f0b2018}
+.pageTabs button.active{background:linear-gradient(135deg,var(--hot),var(--hot2));box-shadow:0 4px 12px #b5122f35}
+main{max-width:1600px;padding:18px;display:block}
+.card{background:rgba(255,255,255,.97);border:1px solid var(--line);box-shadow:0 5px 18px #6b273515;border-radius:13px;padding:17px}
+.sectionHead,.coordtitle,.convertertitle,.drawingtitle{color:var(--hotDark)}
+.coordcard{border-color:var(--hot);background:#fffafa}.coordtable th{background:var(--hotDark)}
+.notice{background:#fff0f2;border-left-color:var(--hot)}
+button{background:var(--hot);border-radius:8px;min-height:46px;padding:11px 14px;font-size:14px;box-shadow:0 2px 5px #7f0b2018}
+button:hover{filter:brightness(1.06)}
+.green{background:#a71935}.alt{background:#665b60}.mapbtn{background:#4f4549}
+.actionStrip{grid-template-columns:1fr 1fr 1.25fr 1fr;gap:8px}.fileBtn{min-height:46px;background:#665b60}
+.stats .stat{background:#fff0f2;border:1px solid #efd0d6;border-radius:9px}.stat b{color:var(--hotDark)}
+.drawingcard{border-color:var(--hot);background:#fffafa}.drawingTools,.exportbox,.contourbox,.converterbox,.gpsbox{background:#fff5f6;border-color:#efcbd1}
+.gpstitle{color:var(--hotDark)}
+.statusBox{background:#fff5f6;border-color:#efcbd1}.fieldSteps{background:#fff0f2}
+.converterbox{border-color:var(--hot)}.convertertitle{color:var(--hotDark)}.convtable th{background:var(--hotDark)}
+.contourbox{border-color:#efcbd1}.exportbox{border-color:#efcbd1}
+.resultsGrid{grid-template-columns:minmax(0,1.7fr) minmax(340px,.8fr)}
+.laptopAction button,.laptopAction .fileBtn{min-height:50px}
+.pageBadge{display:inline-block;background:#fff;color:var(--hotDark);padding:4px 9px;border-radius:999px;font-size:11px;font-weight:800;margin-left:8px}
+.pageIntro{max-width:1600px;margin-left:auto;margin-right:auto;margin-bottom:12px;color:#5d4c51;font-size:13px}
+@media(min-width:1200px){button,input,select{font-size:14px} .pageTabs button{font-size:15px;min-width:220px} .actionStrip button,.actionStrip .fileBtn{min-height:52px;font-size:14px} .quickPts button{min-height:42px}}
+@media(max-width:700px){header{padding:15px}.pageTabs{position:static;overflow-x:auto;flex-wrap:nowrap;padding:8px}.pageTabs button{min-width:max-content;padding:11px 13px;font-size:12px}main{padding:10px}.card{padding:12px}.actionStrip{grid-template-columns:1fr}.wideGrid,.resultsGrid{grid-template-columns:1fr}}
 </style><script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script></head><body>
-<header><h2>🇬🇭 Ghana Site Plan Plotter</h2><div>Simple coordinate plotting, field GPS capture, site computation and mapping for Ghana.</div></header>
-<div class="pageTabs"><button id="tab1" class="active" onclick="showPage(1)">1. COORDINATES & FIELD</button><button id="tab2" onclick="showPage(2)">2. RESULTS & TOOLS</button></div>
+<header><h2>🇬🇭 Ghana Site Plan Plotter</h2><div>Plot, capture, convert and map Ghana site coordinates — designed for engineers, surveyors and field users.</div></header>
+<div class="pageTabs"><button id="tab1" class="active" onclick="showPage(1)">1. PLOT & COMPUTE</button><button id="tab2" onclick="showPage(2)">2. FIELD GPS & CONVERTER</button><button id="tab3" onclick="showPage(3)">3. MAPS, TOOLS & EXPORT</button></div>
 <main>
-<section id="page1" class="page active">
+<section id="page1" class="page active"><div class="pageIntro"><b>Plot your site and calculate the basic survey geometry.</b><span class="pageBadge">Laptop + Phone</span></div>
   <div class="wideGrid">
     <section class="card">
       <div class="sectionHead">📍 COORDINATE ENTRY</div>
@@ -37,10 +67,10 @@ body{font-family:Arial;margin:0;background:#eef2f5;color:#17222d}header{backgrou
     </section>
   </div>
 </section>
-<section id="page2" class="page">
+<section id="page2" class="page"><div class="pageIntro"><b>Capture field positions and convert coordinates between feet and metres.</b></div>
   <div class="resultsGrid">
     <section class="card">
-      <div class="stats"><div class="stat">Area<b id="a">—</b>m²</div><div class="stat">Perimeter<b id="p">—</b>m</div><div class="stat">Acres<b id="ac">—</b></div></div>
+      <div class="sectionHead">📊 PLOT RESULTS</div><div class="stats"><div class="stat">Area<b id="a">—</b>m²</div><div class="stat">Perimeter<b id="p">—</b>m</div><div class="stat">Acres<b id="ac">—</b></div></div>
       <div id="msg" class="successMsg">Ready.</div><div id="err" class="error"></div>
       <div class="tabs"><button onclick="showPlot()">📐 DRAWING</button><button class="mapbtn" onclick="showMap()">🛰️ CHECK PLOT ON SATELLITE</button></div>
       <div class="drawingTools"><b>🗺️ SITE VIEW</b><div class="small">Use the drawing for a quick check, or open the plot on satellite imagery.</div><button class="green" onclick="showMap()">📍 SHOW THIS PLOT ON SATELLITE</button><button onclick="openGoogleSatellite()">OPEN LOCATION IN GOOGLE MAPS</button></div>
@@ -63,7 +93,31 @@ body{font-family:Arial;margin:0;background:#eef2f5;color:#17222d}header{backgrou
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 let R=null,map=null,poly=null,markers=[];window.gridLayers=[];let lastGps=null;
-function showPage(n){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.querySelectorAll('.pageTabs button').forEach(b=>b.classList.remove('active'));$('page'+n).classList.add('active');$('tab'+n).classList.add('active');window.scrollTo({top:0,behavior:'smooth'});if(n===2&&map){setTimeout(()=>map.invalidateSize(),150);}}
+function setupThreePages(){
+  const p1=$('page1'), p2=$('page2');
+  const wide=p1.querySelector('.wideGrid');
+  const entry=wide.children[0], gps=wide.children[1];
+  const results=p2.querySelector('.resultsGrid');
+  const resultCard=results.children[0], toolsCard=results.children[1];
+  const converter=toolsCard.querySelector('.converterbox');
+  const satellite=document.getElementById('satellitePage');
+  const p3=document.createElement('section'); p3.id='page3'; p3.className='page';
+  p3.innerHTML='<div class="pageIntro"><b>Use maps, terrain tools and professional exports after plotting your site.</b></div><div id="page3Tools"></div>';
+  document.querySelector('main').appendChild(p3);
+  // Page 1: coordinate entry + computation results
+  wide.innerHTML=''; wide.appendChild(entry);
+  p1.appendChild(resultCard);
+  // Page 2: phone GPS + converter
+  p2.innerHTML='<div id="page2Field"></div>';
+  document.getElementById('page2Field').appendChild(gps);
+  document.getElementById('page2Field').appendChild(converter);
+  // Page 3: remaining site tools + satellite modal
+  document.getElementById('page3Tools').appendChild(toolsCard);
+  p3.appendChild(satellite);
+  const back=resultCard.querySelector('button.alt[onclick*="showPage(1)"]'); if(back){back.remove();}
+  const toolBack=toolsCard.querySelector('button.alt[onclick*="showPage(1)"]'); if(toolBack){toolBack.setAttribute('onclick','showPage(1)');toolBack.textContent='← BACK TO PLOT & COMPUTE';}
+}
+function showPage(n){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.querySelectorAll('.pageTabs button').forEach(b=>b.classList.remove('active'));$('page'+n).classList.add('active');$('tab'+n).classList.add('active');window.scrollTo({top:0,behavior:'smooth'});if(map){setTimeout(()=>map.invalidateSize(),150);}}
 const $=id=>document.getElementById(id);
 function sysChanged(){ $('utmBox').style.display=$('sys').value==='utm'?'block':'none'; updateCoordHeaders(); if($('sys').value==='war' && !$('unit').dataset.user){$('unit').value='ft';} else if(($('sys').value==='utm'||$('sys').value==='gmg') && !$('unit').dataset.user){$('unit').value='m';} if($('sys').value==='gmg')$('unit').value='m'; unitChanged(); }
 function unitChanged(){ $('unit').dataset.user='1'; $('gridNote').textContent=$('sys').value==='ll'?'Grid is disabled for latitude/longitude input. Select UTM or War Office for a coordinate grid.':'Grid spacing uses the selected coordinate unit and follows Easting/Northing coordinates.'; }
@@ -157,5 +211,5 @@ save('ghana_site_plan.kml',k,'application/vnd.google-earth.kml+xml;charset=utf-8
 function dxf(){if(!R)calc();if(!R)return;let s='0\nSECTION\n2\nENTITIES\n';R.q.forEach((a,i)=>{let b=R.q[(i+1)%R.q.length];s+=`0\nLINE\n8\nSITE_BOUNDARY\n10\n${a.x}\n20\n${a.y}\n11\n${b.x}\n21\n${b.y}\n`});save('ghana_site_plan.dxf',s+'0\nENDSEC\n0\nEOF','application/dxf')}
 function report(){if(!R)calc();if(!R)return;let s=`GHANA SITE PLAN COMPUTATION REPORT\n\nCoordinate system: ${$('sys').selectedOptions[0].text}\nPoints: ${R.q.length}\nArea: ${(R.ar/(unitFactor()**2)).toFixed(3)} ${$('unit').value}2\nAcres: ${(R.ar/4046.8564224).toFixed(4)}\nPerimeter: ${(R.per/unitFactor()).toFixed(3)} ${$('unit').value}\n\n`;R.rows.forEach((r,i)=>s+=`P${i+1}-P${i===R.q.length-1?1:i+2}: ${(r.d/unitFactor()).toFixed(3)} ${$('unit').value}, ${r.br}, dX ${(r.dx/unitFactor()).toFixed(3)}, dY ${(r.dy/unitFactor()).toFixed(3)}\n`);save('ghana_site_plan_report.txt',s,'text/plain')}
 function demo(){ $('sys').value='utm';sysChanged();$('zone').value='30';$('hem').value='N';let d=[[512000,597800],[512120,597800],[512120,597680],[512000,597680]];$('npts').value=4;makePoints();d.forEach((p,i)=>{$('x'+(i+1)).value=p[0];$('y'+(i+1)).value=p[1];$('z'+(i+1)).value=[100,102,101,99][i]});calc()}
-makePoints();makeConverterRows();sysChanged();demo();
+setupThreePages();makePoints();makeConverterRows();sysChanged();demo();
 </script></body></html>
