@@ -1,5 +1,5 @@
 <!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Ghana Site Plan Plotter</title>
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIINfQ3h8hR1hY9QxX0fYfWQ8wJQY6KQWQ=" crossorigin="">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <style>
 body{font-family:Arial;margin:0;background:#eef2f5;color:#17222d}header{background:#17324d;color:#fff;padding:16px}header h2{margin:0 0 5px}main{display:grid;grid-template-columns:390px 1fr;gap:15px;padding:15px;max-width:1500px;margin:auto}.card{background:#fff;padding:14px;border-radius:10px;box-shadow:0 2px 8px #0002}.notice{background:#fff3c4;padding:9px;font-size:12px;border-left:4px solid #bd9000;margin-bottom:10px}label{display:block;font-size:13px;font-weight:bold;margin-top:7px}input,select,button{width:100%;padding:9px;margin-top:4px;box-sizing:border-box}button{background:#17324d;color:#fff;border:0;border-radius:5px;font-weight:bold;margin-top:8px;cursor:pointer}.alt{background:#617587}.green{background:#287a45}.mapbtn{background:#555}.pointbar{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:end;background:#f1f6fa;border:1px solid #cfdbe4;border-radius:8px;padding:10px;margin-top:8px}.pointbar>div{min-width:0}.pointbar button{width:auto;padding:10px 14px;margin:0;white-space:nowrap}.coordcard{margin-top:10px;border:2px solid #17324d;border-radius:9px;padding:10px;background:#fff}.coordtitle{font-size:15px;font-weight:800;color:#17324d;margin-bottom:3px}.coordhint{font-size:11px;color:#65737e;margin-bottom:7px}.coordwrap{max-height:480px;overflow:auto;margin-top:8px;border:1px solid #bfcbd4;border-radius:6px}.coordtable{width:100%;border-collapse:collapse;font-size:12px;min-width:520px}.coordtable th{position:sticky;top:0;background:#17324d;color:#fff;padding:8px;text-align:center;z-index:2}.coordtable th:nth-child(1),.coordtable td:nth-child(1){width:58px;min-width:58px}.coordtable th:nth-child(2),.coordtable td:nth-child(2){width:185px;min-width:185px}.coordtable th:nth-child(3),.coordtable td:nth-child(3){width:185px;min-width:185px}.coordtable th:nth-child(4),.coordtable td:nth-child(4){width:82px;min-width:82px}.coordtable td{border:1px solid #d7dde2;padding:4px}.coordtable td:first-child{text-align:center;font-weight:bold;background:#f4f7f9;width:58px}.coordtable input{margin:0;padding:8px 9px;width:100%;min-width:165px;font-size:14px;box-sizing:border-box}.coordwrap{max-height:420px;overflow:auto;margin-top:8px;border:1px solid #d7dde2;border-radius:6px}.coordtable{width:100%;border-collapse:collapse;font-size:12px;min-width:520px}.coordtable th{position:sticky;top:0;background:#17324d;color:#fff;padding:7px;text-align:center}.coordtable td{border:1px solid #d7dde2;padding:4px}.coordtable td:first-child{text-align:center;font-weight:bold;background:#f4f7f9}.coordtable input{margin:0;padding:8px 9px;width:100%;min-width:165px;font-size:14px;box-sizing:border-box}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.stat{padding:10px;background:#edf3f7}.stat b{display:block;font-size:18px}.error{display:none;background:#ffdede;padding:8px;margin:8px 0;color:#900}.drawingcard{margin:8px 0 10px;border:2px solid #17324d;border-radius:9px;padding:10px;background:#f4f8fb}.drawingtitle{font-size:15px;font-weight:800;color:#17324d;margin-bottom:4px}#plot{width:100%;height:430px;border:1px solid #ccd;background:#fafafa}.contourbox{margin-top:10px;border:1px solid #cfdbe4;border-radius:8px;padding:10px;background:#f7fafc}.contourgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.contourbox button{margin-top:6px}.contournote{font-size:11px;color:#65737e;margin-top:6px}#map{width:100%;height:min(68vh,620px);border:1px solid #ccd;border-radius:6px;display:block}.satellitePage{display:none;position:fixed;inset:0;background:rgba(0,0,0,.62);z-index:5000;padding:18px;box-sizing:border-box;align-items:center;justify-content:center}.satellitePage.open{display:flex}.satelliteBox{background:#fff;width:min(1200px,96vw);height:min(82vh,760px);border-radius:12px;box-shadow:0 8px 30px #0006;padding:12px;box-sizing:border-box;display:flex;flex-direction:column}.satelliteHead{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:8px}.closeSat{width:auto;margin:0;background:#555;padding:8px 12px}.satellitePage #map{flex:1;min-height:320px}.tabs{display:flex;gap:7px;margin:8px 0}.tabs button{margin:0}.small{font-size:11px;color:#65737e}.file{font-size:12px;background:#f6f7f8;padding:8px;border:1px solid #ddd;border-radius:5px;margin-top:8px}@media(max-width:900px){main{grid-template-columns:1fr}.coordwrap{max-height:none}}
 
@@ -37,9 +37,18 @@ button:hover{filter:brightness(1.06)}
 .pageIntro{max-width:1600px;margin-left:auto;margin-right:auto;margin-bottom:12px;color:#5d4c51;font-size:13px}
 @media(min-width:1200px){button,input,select{font-size:14px} .pageTabs button{font-size:15px;min-width:220px} .actionStrip button,.actionStrip .fileBtn{min-height:52px;font-size:14px} .quickPts button{min-height:42px}}
 @media(max-width:700px){header{padding:15px}.pageTabs{position:static;overflow-x:auto;flex-wrap:nowrap;padding:8px}.pageTabs button{min-width:max-content;padding:11px 13px;font-size:12px}main{padding:10px}.card{padding:12px}.actionStrip{grid-template-columns:1fr}.wideGrid,.resultsGrid{grid-template-columns:1fr}}
+
+/* V22 field GPS: compact, visible beside the main coordinate workflow */
+.gpscard{margin-top:10px;border:1px solid #d9a7b1;background:linear-gradient(135deg,#fff7f8,#fff);border-radius:9px;padding:10px}
+.gpscard .sectionHead{color:var(--hotDark)}
+.gpscard .gpscontrols{display:grid;grid-template-columns:1fr 1.35fr;gap:8px}
+.gpscard button{margin-top:0;min-height:44px}
+.gpscard .statusBox{margin-top:7px}
+@media(min-width:1200px){.gpscard .gpscontrols button{min-height:48px;font-size:15px}}
+@media(max-width:600px){.gpscard .gpscontrols{grid-template-columns:1fr}}
 </style><script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script></head><body>
 <header><h2>🇬🇭 Ghana Site Plan Plotter</h2><div>Plot, capture, convert and map Ghana site coordinates — designed for engineers, surveyors and field users.</div></header>
-<div class="pageTabs"><button id="tab1" class="active" onclick="showPage(1)">1. PLOT & COMPUTE</button><button id="tab2" onclick="showPage(2)">2. FIELD GPS & CONVERTER</button><button id="tab3" onclick="showPage(3)">3. MAPS, TOOLS & EXPORT</button></div>
+<div class="pageTabs"><button id="tab1" class="active" onclick="showPage(1)">1. PLOT & COMPUTE</button><button id="tab2" onclick="showPage(2)">2. FIELD GPS & CONVERTER</button><button id="tab3" onclick="showPage(3)">3. TOOLS & EXPORT</button></div>
 <main>
 <section id="page1" class="page active"><div class="pageIntro"><b>Plot your site and calculate the basic survey geometry.</b><span class="pageBadge">Laptop + Phone</span></div>
   <div class="wideGrid">
@@ -56,14 +65,14 @@ button:hover{filter:brightness(1.06)}
       <div class="quickPts"><button class="alt" onclick="setPointCount(4)">4</button><button class="alt" onclick="setPointCount(10)">10</button><button class="alt" onclick="setPointCount(20)">20</button><button class="alt" onclick="setPointCount(50)">50</button><button class="alt" onclick="setPointCount(100)">100</button></div>
       <div class="coordwrap"><table class="coordtable"><thead><tr><th>Point</th><th id="xHead">X — Longitude</th><th id="yHead">Y — Latitude</th><th>Elevation (m)</th></tr></thead><tbody id="points"></tbody></table></div>
       <div class="small entrynote">Enter points in boundary order. You can type them manually or load a CSV.</div>
-      <div class="actionStrip"><label class="fileBtn">📂 IMPORT CSV<input id="csvfile" type="file" accept=".csv,text/csv" onchange="importCSV(event)"></label><button class="green" onclick="downloadCSV()">⬇️ EXPORT CSV</button><button onclick="calc();showPage(2)">📐 PLOT & COMPUTE</button><button class="alt" onclick="demo()">LOAD DEMO</button></div>
+      <div class="actionStrip"><label class="fileBtn">📂 IMPORT CSV<input id="csvfile" type="file" accept=".csv,text/csv" onchange="importCSV(event)"></label><button class="green" onclick="downloadCSV()">⬇️ EXPORT CSV</button><button onclick="calc();showPage(1)">📐 PLOT & COMPUTE</button><button class="alt" onclick="demo()">LOAD DEMO</button></div>
     </section>
-    <section class="card">
+    <section class="card gpscard">
       <div class="sectionHead">📍 PHONE GPS — PICK A LOCATION</div>
       <div class="gpsIntro">Use your phone location to capture a point and convert it automatically to <b>Ghana Metre Grid</b>. Walk to the next point and repeat. This is for preliminary positioning, not survey-grade cadastral work.</div>
       <div class="gpscontrols"><button class="green" onclick="getPhoneLocation()">📍 GET MY LOCATION</button><button onclick="addGpsPoint()">➕ ADD AS GHANA METRE GRID POINT</button></div>
       <div id="gpsStatus" class="statusBox">Ready to capture a phone GPS position.</div>
-      <div class="fieldSteps"><b>Quick field workflow</b><br>1. Allow location access.<br>2. Capture your position.<br>3. Add it as P1.<br>4. Move to the next point and repeat.<br>5. When finished, tap <b>PLOT & COMPUTE</b>.</div>
+      <div class="small" style="margin-top:6px">Allow location access, capture your position, then add it as the next Ghana Metre Grid point.</div>
     </section>
   </div>
 </section>
@@ -83,7 +92,7 @@ button:hover{filter:brightness(1.06)}
       </div>
       <div class="contourbox"><b>⛰️ CONTOURS / TERRAIN</b><div class="contournote">Enter elevations on Page 1. Contours are interpolated from the supplied spot heights.</div><div class="contourgrid"><div><label>Contour interval (m)</label><select id="contourInterval"><option value="0.5">0.5</option><option value="1" selected>1</option><option value="2">2</option><option value="5">5</option><option value="10">10</option></select></div><div><label>Contour mode</label><select id="contourMode"><option value="both" selected>Drawing + Satellite</option><option value="drawing">Drawing only</option><option value="map">Satellite only</option></select></div></div><button class="green" onclick="generateContours()">GENERATE CONTOURS</button><button class="alt" onclick="clearContours()">CLEAR CONTOURS</button><div id="contourStatus" class="contournote"></div></div>
       <div class="converterbox"><div class="convertertitle">🔄 COORDINATE CONVERTER — FEET ↔ METRES</div><div class="small">Convert up to 100 X/Y coordinate pairs without changing the plotted coordinates.</div><div class="convertercontrols"><div><label>Number of coordinates</label><input id="convN" type="number" min="1" max="100" value="4" onchange="makeConverterRows()"></div><div><label>Convert from</label><select id="convFrom"><option value="ft">Feet (ft)</option><option value="m">Metres (m)</option></select></div><div><label>Convert to</label><select id="convTo"><option value="m">Metres (m)</option><option value="ft">Feet (ft)</option></select></div></div><div class="convwrap"><table class="convtable"><thead><tr><th>Point</th><th>X / Easting</th><th>Y / Northing</th><th>Converted X</th><th>Converted Y</th></tr></thead><tbody id="convRows"></tbody></table></div><div class="converterActions"><button class="green" onclick="convertCoordinates()">CONVERT</button><button class="green" onclick="exportConverterExcel()">📊 EXPORT TO EXCEL</button><button onclick="printConverter()">🖨️ PRINT</button><button class="alt" onclick="clearConverter()">CLEAR</button></div><div id="convStatus" class="contournote"></div></div>
-      <div class="exportbox"><b>📤 EXPORT</b><button class="green" onclick="downloadKML()">DOWNLOAD KML FOR GOOGLE EARTH</button><button onclick="dxf()">DOWNLOAD AUTOCAD DXF</button><button onclick="report()">DOWNLOAD REPORT</button><div class="small">KML exports the plotted boundary and points in WGS84 for Google Earth.</div></div>
+      <div class="exportbox"><b>📤 EXPORT</b><button class="green" onclick="downloadKML()">DOWNLOAD KML FOR GOOGLE EARTH</button><button onclick="dxf()">DOWNLOAD AUTOCAD DXF</button><button onclick="report()">DOWNLOAD REPORT</button><div class="small">KML converts the plotted coordinates to WGS84 longitude/latitude for Google Earth. Always verify the result against known control before official survey use.</div></div>
       <button class="alt" onclick="showPage(1)">← BACK TO COORDINATES & FIELD</button>
     </section>
   </div>
@@ -100,24 +109,57 @@ function setupThreePages(){
   const results=p2.querySelector('.resultsGrid');
   const resultCard=results.children[0], toolsCard=results.children[1];
   const converter=toolsCard.querySelector('.converterbox');
-  const satellite=document.getElementById('satellitePage');
+  const contour=toolsCard.querySelector('.contourbox');
+  const toolbox=toolsCard.querySelector('.toolbox');
+  const exportbox=toolsCard.querySelector('.exportbox');
+  const oldMap=document.getElementById('map');
+
   const p3=document.createElement('section'); p3.id='page3'; p3.className='page';
-  p3.innerHTML='<div class="pageIntro"><b>Use maps, terrain tools and professional exports after plotting your site.</b></div><div id="page3Tools"></div>';
+  p3.innerHTML=`<div class="pageIntro"><b>🛠️ TOOLS & EXPORT</b><span class="pageBadge">Prepare and export your completed site plan</span></div>
+    <div class="resultsGrid page3SimpleGrid">
+      <section class="card" id="page3Tools"></section>
+    </div>`;
   document.querySelector('main').appendChild(p3);
-  // Page 1: coordinate entry + computation results
-  wide.innerHTML=''; wide.appendChild(entry);
-  p1.appendChild(resultCard);
-  // Page 2: phone GPS + converter
-  p2.innerHTML='<div id="page2Field"></div>';
-  document.getElementById('page2Field').appendChild(gps);
+
+  // PAGE 1: Plot & Compute owns the complete working drawing, grid, terrain and satellite preview.
+  wide.innerHTML=''; wide.appendChild(entry); entry.appendChild(gps); p1.appendChild(resultCard);
+  resultCard.querySelectorAll('.tabs,.drawingTools').forEach(e=>e.remove());
+  const plot=resultCard.querySelector('#plot'); if(plot) plot.style.height='520px';
+
+  // Move Grid and Terrain back beside the drawing because they directly control the plotted plan.
+  resultCard.insertBefore(toolbox, plot);
+  resultCard.insertBefore(contour, plot.nextSibling);
+
+  // Add a compact satellite preview directly to Page 1.
+  const mapCard=document.createElement('section');
+  mapCard.className='card page1MapCard';
+  mapCard.innerHTML=`<div class="sectionHead">🛰️ SITE LOCATION — SATELLITE MAP</div>
+    <div class="satIntro">Your Page 1 plot is shown here on satellite imagery. Plot and compute first, then click the button to move the map to your site.</div>
+    <div class="satActions"><button class="green" onclick="showPlottedSiteOnMap()">📍 SHOW PLOT ON SATELLITE</button><button onclick="openGoogleSatellite()">🌍 OPEN IN GOOGLE MAPS</button></div>
+    <div class="mapStatus" id="mapStatus">Your plotted site will appear here after PLOT & COMPUTE.</div>
+    <div id="page1Map" class="page1Map"><div id="mapHint" class="mapHint">🛰️ <b>Satellite preview</b><br><span>Plot your coordinates on Page 1 and the boundary will be positioned here.</span></div></div>
+    <div class="mapLegend"><span><i class="legendDot"></i> Survey point</span><span><i class="legendLine"></i> Site boundary</span><span>🛰️ Satellite imagery</span></div>`;
+  p1.appendChild(mapCard);
+  if(oldMap){$('page1Map').appendChild(oldMap); oldMap.style.display='block';}
+
+  // PAGE 2: Coordinate converter only.
+  p2.innerHTML='<div class="pageIntro"><b>Convert coordinate pairs between feet and metres without changing your plotted data.</b></div><div id="page2Field"></div>';
   document.getElementById('page2Field').appendChild(converter);
-  // Page 3: remaining site tools + satellite modal
-  document.getElementById('page3Tools').appendChild(toolsCard);
-  p3.appendChild(satellite);
-  const back=resultCard.querySelector('button.alt[onclick*="showPage(1)"]'); if(back){back.remove();}
-  const toolBack=toolsCard.querySelector('button.alt[onclick*="showPage(1)"]'); if(toolBack){toolBack.setAttribute('onclick','showPage(1)');toolBack.textContent='← BACK TO PLOT & COMPUTE';}
+
+  // PAGE 3: Export and remaining tools only.
+  const toolsHost=document.getElementById('page3Tools');
+  toolsHost.appendChild(exportbox);
+  const backBtn=document.createElement('button'); backBtn.className='alt'; backBtn.textContent='← BACK TO PLOT & COMPUTE'; backBtn.onclick=()=>showPage(1); toolsHost.appendChild(backBtn);
+  const oldBack=toolsHost.querySelector('button.alt[onclick*="showPage(1)"]');
+  if(oldBack){oldBack.setAttribute('onclick','showPage(1)');oldBack.textContent='← BACK TO PLOT & COMPUTE';}
 }
-function showPage(n){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.querySelectorAll('.pageTabs button').forEach(b=>b.classList.remove('active'));$('page'+n).classList.add('active');$('tab'+n).classList.add('active');window.scrollTo({top:0,behavior:'smooth'});if(map){setTimeout(()=>map.invalidateSize(),150);}}
+function showPage(n){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.pageTabs button').forEach(b=>b.classList.remove('active'));
+  $('page'+n).classList.add('active');$('tab'+n).classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+  if(map)setTimeout(()=>map.invalidateSize(),120);
+}
 const $=id=>document.getElementById(id);
 function sysChanged(){ $('utmBox').style.display=$('sys').value==='utm'?'block':'none'; updateCoordHeaders(); if($('sys').value==='war' && !$('unit').dataset.user){$('unit').value='ft';} else if(($('sys').value==='utm'||$('sys').value==='gmg') && !$('unit').dataset.user){$('unit').value='m';} if($('sys').value==='gmg')$('unit').value='m'; unitChanged(); }
 function unitChanged(){ $('unit').dataset.user='1'; $('gridNote').textContent=$('sys').value==='ll'?'Grid is disabled for latitude/longitude input. Select UTM or War Office for a coordinate grid.':'Grid spacing uses the selected coordinate unit and follows Easting/Northing coordinates.'; }
@@ -149,6 +191,11 @@ function printConverter(){
   let w=window.open('','_blank');
   w.document.write(`<!doctype html><html><head><title>Ghana Coordinate Conversion</title><style>body{font-family:Arial;padding:25px}h2{margin-bottom:5px}p{font-size:13px}table{border-collapse:collapse;width:100%;margin-top:18px}th,td{border:1px solid #333;padding:8px;text-align:center}th{background:#eee}@media print{button{display:none}}
 .pageTabs{display:flex;gap:8px;max-width:1600px;margin:12px auto 0;padding:0 16px}.pageTabs button{margin:0;width:auto;padding:11px 18px}.pageTabs button.active{background:#287a45}.page{display:none}.page.active{display:block}main{display:block;max-width:1600px;padding:14px 16px;margin:auto}.wideGrid,.resultsGrid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(330px,.75fr);gap:14px}.sectionHead{font-size:16px;font-weight:800;color:#17324d;margin-bottom:8px}.settingsGrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:10px}.quickPts{display:flex;gap:6px;margin-top:7px}.quickPts button{width:auto;margin:0;padding:7px 12px}.coordhint{font-size:11px;color:#65737e;margin:7px 0}.coordwrap{max-height:470px;overflow:auto;margin-top:8px;border:1px solid #bfcbd4;border-radius:6px}.entrynote{margin-top:6px}.actionStrip{display:grid;grid-template-columns:1.1fr 1fr 1.25fr 1fr;gap:7px;margin-top:8px}.actionStrip button,.fileBtn{margin:0}.fileBtn{display:flex;align-items:center;justify-content:center;background:#617587;color:#fff;border-radius:5px;font-weight:bold;padding:9px;cursor:pointer;box-sizing:border-box}.fileBtn input{display:none}.gpsIntro{font-size:12px;line-height:1.45;color:#4f5f6b}.statusBox{margin-top:8px;padding:9px;background:#eef7f0;border:1px solid #b8d7bf;border-radius:6px;font-size:11px}.fieldSteps{margin-top:12px;padding:10px;background:#f4f8fb;border-radius:7px;font-size:12px;line-height:1.7}.successMsg{margin:8px 0;padding:8px;background:#eef7f0;border-radius:5px;font-size:12px}.drawingTools{padding:10px;background:#f4f8fb;border:1px solid #d7e0e7;border-radius:7px;margin-bottom:8px}.drawingTools button{display:inline-block;width:auto;margin-right:6px}.drawingNote{margin-top:6px}.tableScroll{overflow:auto}.compTable{width:100%;border-collapse:collapse;font-size:12px}.compTable th,.compTable td{border:1px solid #ccd;padding:6px;text-align:center}.compTable th{background:#edf3f7}.toolbox{padding-bottom:8px}.exportbox{margin-top:10px;padding:10px;background:#f4f8fb;border:1px solid #d7e0e7;border-radius:7px}.exportbox button{margin-top:6px}.converterActions{display:grid;grid-template-columns:1fr 1.5fr 1fr 1fr;gap:6px}.converterActions button{margin-top:6px}.coordtable th:nth-child(1),.coordtable td:nth-child(1){width:58px;min-width:58px}.coordtable th:nth-child(2),.coordtable td:nth-child(2){width:185px;min-width:185px}.coordtable th:nth-child(3),.coordtable td:nth-child(3){width:185px;min-width:185px}.coordtable th:nth-child(4),.coordtable td:nth-child(4){width:82px;min-width:82px}.coordtable input{min-width:165px}.converterbox,.contourbox{margin-top:10px}.drawingcard{margin:0}.satellitePage{display:none;position:fixed;inset:0;background:rgba(0,0,0,.62);z-index:5000;padding:18px;box-sizing:border-box;align-items:center;justify-content:center}.satellitePage.open{display:flex}.satelliteBox{background:#fff;width:min(1200px,96vw);height:min(82vh,760px);border-radius:12px;box-shadow:0 8px 30px #0006;padding:12px;box-sizing:border-box;display:flex;flex-direction:column}.satelliteHead{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:8px}.closeSat{width:auto;margin:0;background:#555;padding:8px 12px}.satellitePage #map{flex:1;min-height:320px}@media(max-width:1000px){.wideGrid,.resultsGrid{grid-template-columns:1fr}.settingsGrid{grid-template-columns:1fr 1fr}.actionStrip{grid-template-columns:1fr 1fr}.converterActions{grid-template-columns:1fr 1fr}}@media(max-width:600px){.pageTabs{padding:0 8px}.pageTabs button{font-size:11px;padding:10px 8px}.settingsGrid{grid-template-columns:1fr}.actionStrip{grid-template-columns:1fr}.coordwrap{max-height:none}.convertercontrols{grid-template-columns:1fr}.converterActions{grid-template-columns:1fr}.drawingTools button{width:100%;margin-right:0}.gpscontrols{grid-template-columns:1fr}}
+
+.page1MapCard{margin-top:14px}.page1Map{height:390px;min-height:390px;border:2px solid #8f1830;border-radius:12px;overflow:hidden;background:#dfe7ec;position:relative;box-shadow:inset 0 0 0 1px #ffffff88}.page1Map #map{height:100%!important;min-height:390px;border:0;border-radius:10px;display:block}.page1Map .leaflet-container{height:100%!important;width:100%}.page3SimpleGrid{grid-template-columns:1fr;max-width:900px}.page3SimpleGrid #page3Tools{min-height:220px}
+.mapToolsGrid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(330px,.8fr);gap:14px}.satelliteCard{min-height:auto}.satIntro{font-size:12px;color:#5d4c51;line-height:1.5;margin-bottom:8px}.satActions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px}.satActions button{margin:0}.mapStatus{margin:7px 0 8px;padding:8px 10px;background:#fff8f8;border:1px solid #e7c3ca;border-radius:8px;color:#7f0b20;font-size:11px;line-height:1.45}.page3Map{height:455px;min-height:455px;border:2px solid #8f1830;border-radius:12px;overflow:hidden;background:#dfe7ec;position:relative;box-shadow:inset 0 0 0 1px #ffffff88}.page3Map #map{height:100%!important;min-height:455px;border:0;border-radius:10px;display:block}.page3Map .leaflet-container{height:100%!important;width:100%}.mapHint{position:absolute;z-index:900;background:rgba(255,255,255,.92);left:50%;top:50%;transform:translate(-50%,-50%);width:min(380px,82%);padding:14px 16px;border:1px solid #e7c3ca;border-radius:10px;box-shadow:0 5px 18px #6b273530;text-align:center;color:#7f0b20;font-size:13px;line-height:1.5;pointer-events:none}.mapHint span{display:block;color:#5d4c51;font-size:11px;margin-top:4px}.mapLegend{display:flex;gap:14px;flex-wrap:wrap;align-items:center;padding:7px 2px 0;font-size:11px;color:#5d4c51}.legendDot{display:inline-block;width:9px;height:9px;border-radius:50%;background:#b5122f;margin-right:4px}.legendLine{display:inline-block;width:15px;border-top:3px solid #ff0000;margin-right:4px;vertical-align:middle}@media(max-width:1000px){
+.page1MapCard{margin-top:14px}.page1Map{height:390px;min-height:390px;border:2px solid #8f1830;border-radius:12px;overflow:hidden;background:#dfe7ec;position:relative;box-shadow:inset 0 0 0 1px #ffffff88}.page1Map #map{height:100%!important;min-height:390px;border:0;border-radius:10px;display:block}.page1Map .leaflet-container{height:100%!important;width:100%}.page3SimpleGrid{grid-template-columns:1fr;max-width:900px}.page3SimpleGrid #page3Tools{min-height:220px}
+.mapToolsGrid{grid-template-columns:1fr}.satelliteCard{min-height:auto}.page3Map{height:420px;min-height:420px}.page3Map #map{min-height:420px}}@media(max-width:600px){.satActions{grid-template-columns:1fr}.page3Map{height:340px;min-height:340px}.page3Map #map{min-height:340px}.mapLegend{gap:8px}}
 </style></head><body><h2>Ghana Coordinate Conversion</h2><p>Conversion: ${from==='ft'?'Feet':'Metres'} → ${to==='ft'?'Feet':'Metres'}</p><table><thead><tr><th>Point</th><th>X / Easting (${from})</th><th>Y / Northing (${from})</th><th>Converted X (${to})</th><th>Converted Y (${to})</th></tr></thead><tbody>${rows}</tbody></table><p>Developed by Lewis Baah — © 2026 Lewis Baah</p><button onclick="window.print()">Print</button></body></html>`);w.document.close();w.focus();
 }
 
@@ -158,7 +205,7 @@ function getPts(){let n=parseInt($('npts').value),q=[];for(let i=1;i<=n;i++){let
 function metricPts(q){let f=unitFactor();return q.map(p=>({x:p.x*f,y:p.y*f,z:p.z,rawX:p.rawX,rawY:p.rawY}));}
 function bear(dx,dy){let d=Math.atan2(dx,dy)*180/Math.PI;if(d<0)d+=360;let D=Math.floor(d),M=Math.floor((d-D)*60),S=Math.round(((((d-D)*60)-M)*60));if(S===60){S=0;M++}if(M===60){M=0;D++}if(D===360)D=0;return String(D).padStart(3,'0')+'° '+String(M).padStart(2,'0')+"' "+String(S).padStart(2,'0')+'"';}
 function area(q){let s=0;for(let i=0;i<q.length;i++){let j=(i+1)%q.length;s+=q[i].x*q[j].y-q[j].x*q[i].y}return Math.abs(s)/2;}
-function calc(){ $('err').style.display='none';try{let input=getPts(),q=metricPts(input),rows=[],per=0;for(let i=0;i<q.length;i++){let b=q[(i+1)%q.length],a=q[i],dx=b.x-a.x,dy=b.y-a.y,d=Math.hypot(dx,dy);per+=d;rows.push({d,dx,dy,br:bear(dx,dy)})}let ar=area(q);R={q,rawQ:input,rows,per,ar};$('a').textContent=(ar/(unitFactor()**2)).toFixed(2);$('p').textContent=(per/unitFactor()).toFixed(2);document.querySelector('.stat:nth-child(1)').innerHTML='Area<b id="a">'+(ar/(unitFactor()**2)).toFixed(2)+'</b>'+$('unit').value+'²';document.querySelector('.stat:nth-child(2)').innerHTML='Perimeter<b id="p">'+(per/unitFactor()).toFixed(2)+'</b>'+$('unit').value;$('ac').textContent=(ar/4046.8564224).toFixed(4);$('msg').innerHTML='✅ Plot generated successfully with '+q.length+' points.';$('rows').innerHTML=rows.map((r,i)=>`<tr><td style="border:1px solid #ccd;padding:5px">P${i+1}–P${i===q.length-1?1:i+2}</td><td style="border:1px solid #ccd;padding:5px">${(r.d/unitFactor()).toFixed(3)}</td><td style="border:1px solid #ccd;padding:5px">${r.br}</td><td style="border:1px solid #ccd;padding:5px">${r.dx.toFixed(3)}</td><td style="border:1px solid #ccd;padding:5px">${r.dy.toFixed(3)}</td></tr>`).join('');draw(q);showPlot();if(map)updateMap();}catch(e){$('err').textContent=e.message;$('err').style.display='block';}}
+function calc(){ $('err').style.display='none';try{let input=getPts(),q=metricPts(input),rows=[],per=0;for(let i=0;i<q.length;i++){let b=q[(i+1)%q.length],a=q[i],dx=b.x-a.x,dy=b.y-a.y,d=Math.hypot(dx,dy);per+=d;rows.push({d,dx,dy,br:bear(dx,dy)})}let ar=area(q);R={q,rawQ:input,rows,per,ar};$('a').textContent=(ar/(unitFactor()**2)).toFixed(2);$('p').textContent=(per/unitFactor()).toFixed(2);document.querySelector('.stat:nth-child(1)').innerHTML='Area<b id="a">'+(ar/(unitFactor()**2)).toFixed(2)+'</b>'+$('unit').value+'²';document.querySelector('.stat:nth-child(2)').innerHTML='Perimeter<b id="p">'+(per/unitFactor()).toFixed(2)+'</b>'+$('unit').value;$('ac').textContent=(ar/4046.8564224).toFixed(4);$('msg').innerHTML='✅ Plot generated successfully with '+q.length+' points.';$('rows').innerHTML=rows.map((r,i)=>`<tr><td style="border:1px solid #ccd;padding:5px">P${i+1}–P${i===q.length-1?1:i+2}</td><td style="border:1px solid #ccd;padding:5px">${(r.d/unitFactor()).toFixed(3)}</td><td style="border:1px solid #ccd;padding:5px">${r.br}</td><td style="border:1px solid #ccd;padding:5px">${r.dx.toFixed(3)}</td><td style="border:1px solid #ccd;padding:5px">${r.dy.toFixed(3)}</td></tr>`).join('');draw(q);showPlot();updateMapStatus();if(map)updateMap();}catch(e){$('err').textContent=e.message;$('err').style.display='block';}}
 function draw(q){let s=$('plot');s.innerHTML='';let mnx=Math.min(...q.map(x=>x.x)),mxx=Math.max(...q.map(x=>x.x)),mny=Math.min(...q.map(x=>x.y)),mxy=Math.max(...q.map(x=>x.y));let spanX=mxx-mnx||1,spanY=mxy-mny||1,sx=820/spanX,sy=300/spanY,k=Math.min(sx,sy);let P=q.map(x=>[90+(x.x-mnx)*k,390-(x.y-mny)*k]);let gs=parseFloat($('grid').value)*unitFactor();if(gs&&$('sys').value!=='ll'){let x0=Math.floor(mnx/gs)*gs,x1=Math.ceil(mxx/gs)*gs,y0=Math.floor(mny/gs)*gs,y1=Math.ceil(mxy/gs)*gs;for(let x=x0;x<=x1+gs*0.001;x+=gs){let px=90+(x-mnx)*k;if(px>=20&&px<=980){let a=document.createElementNS('http://www.w3.org/2000/svg','line');a.setAttribute('x1',px);a.setAttribute('x2',px);a.setAttribute('y1',55);a.setAttribute('y2',405);a.setAttribute('stroke','#607d8b');a.setAttribute('stroke-opacity','.5');a.setAttribute('stroke-width','1');s.appendChild(a);let t=document.createElementNS('http://www.w3.org/2000/svg','text');t.setAttribute('x',px+3);t.setAttribute('y',48);t.setAttribute('font-size','11');t.setAttribute('fill','#263238');t.textContent=x.toFixed(0);s.appendChild(t)}}for(let y=y0;y<=y1+gs*0.001;y+=gs){let py=390-(y-mny)*k;if(py>=25&&py<=415){let a=document.createElementNS('http://www.w3.org/2000/svg','line');a.setAttribute('x1',90);a.setAttribute('x2',910);a.setAttribute('y1',py);a.setAttribute('y2',py);a.setAttribute('stroke','#607d8b');a.setAttribute('stroke-opacity','.5');a.setAttribute('stroke-width','1');s.appendChild(a);let t=document.createElementNS('http://www.w3.org/2000/svg','text');t.setAttribute('x',12);t.setAttribute('y',py-3);t.setAttribute('font-size','11');t.setAttribute('fill','#263238');t.textContent=y.toFixed(0);s.appendChild(t)}}}let n=document.createElementNS('http://www.w3.org/2000/svg','polygon');n.setAttribute('points',P.map(x=>x.join(',')).join(' '));n.setAttribute('fill','#b8d9a5');n.setAttribute('fill-opacity','.55');n.setAttribute('stroke','#17324d');n.setAttribute('stroke-width','4');s.appendChild(n);P.forEach((x,i)=>{let c=document.createElementNS('http://www.w3.org/2000/svg','circle');c.setAttribute('cx',x[0]);c.setAttribute('cy',x[1]);c.setAttribute('r',6);c.setAttribute('fill','#17324d');s.appendChild(c);let t=document.createElementNS('http://www.w3.org/2000/svg','text');t.setAttribute('x',x[0]+9);t.setAttribute('y',x[1]-9);t.setAttribute('font-size','15');t.setAttribute('font-weight','bold');t.textContent='P'+(i+1);s.appendChild(t)});let t=document.createElementNS('http://www.w3.org/2000/svg','text');t.setAttribute('x',900);t.setAttribute('y',30);t.setAttribute('font-size','22');t.textContent='N ↑';s.appendChild(t)}
 function inverseUTM(E,N,zone,hem){let a=6378137,e=0.0818191908426,k0=.9996,x=E-500000,y=N;if(hem==='S')y-=10000000;let M=y/k0,mu=M/(a*(1-e*e/4-3*e**4/64-5*e**6/256));let e1=(1-Math.sqrt(1-e*e))/(1+Math.sqrt(1-e*e));let J1=3*e1/2-27*e1**3/32,J2=21*e1**2/16-55*e1**4/32,J3=151*e1**3/96,J4=1097*e1**4/512;let fp=mu+J1*Math.sin(2*mu)+J2*Math.sin(4*mu)+J3*Math.sin(6*mu)+J4*Math.sin(8*mu);let ep2=e*e/(1-e*e),C1=ep2*Math.cos(fp)**2,T1=Math.tan(fp)**2,N1=a/Math.sqrt(1-e*e*Math.sin(fp)**2),R1=a*(1-e*e)/Math.pow(1-e*e*Math.sin(fp)**2,1.5),D=x/(N1*k0);let lat=fp-(N1*Math.tan(fp)/R1)*(D*D/2-(5+3*T1+10*C1-4*C1*C1-9*ep2)*D**4/24+(61+90*T1+298*C1+45*T1*T1-252*ep2-3*C1*C1)*D**6/720);let lon0=(zone*6-183)*Math.PI/180;let lon=lon0+(D-(1+2*T1+C1)*D**3/6+(5-2*C1+28*T1-3*C1*C1+8*ep2+24*T1*T1)*D**5/120)/Math.cos(fp);return {lat:lat*180/Math.PI,lon:lon*180/Math.PI};}
 function tmInverse(E,N,par){
@@ -176,16 +223,98 @@ function tmForward(lat,lon,par){let a=par.a,rf=par.rf,f=1/rf,e2=2*f-f*f,ep2=e2/(
 function wgsToGmg(lat,lon){let local=wgsToLocalGeodetic(lat,lon,{a:6378249.145,rf:293.465,dx:-130,dy:29,dz:364});return tmForward(local.lat,local.lon,{a:6378249.145,rf:293.465,k0:.99975,lon0:-1,lat0:4.666666666666667,FE:274319.51,FN:0})}
 function getPhoneLocation(){if(!navigator.geolocation){$('gpsStatus').textContent='❌ This browser does not provide GPS location.';return}$('gpsStatus').textContent='📡 Getting your phone location… Please allow location access if asked.';navigator.geolocation.getCurrentPosition(function(pos){let lat=pos.coords.latitude,lon=pos.coords.longitude,acc=pos.coords.accuracy,g=wgsToGmg(lat,lon);lastGps={lat:lat,lon:lon,accuracy:acc,x:g.x,y:g.y};$('gpsStatus').innerHTML='✅ Captured: <b>Lat '+lat.toFixed(7)+'°, Lon '+lon.toFixed(7)+'°</b> | Accuracy about <b>'+Math.round(acc)+' m</b> | Ghana Metre Grid: <b>X '+g.x.toFixed(3)+', Y '+g.y.toFixed(3)+'</b>. Tap <b>ADD AS GHANA METRE GRID POINT</b> to save it.'},function(err){let m=err.code===1?'Location permission was denied. Please allow location access.':err.code===2?'Your phone could not determine a location. Try moving outdoors.':'Location request timed out. Try again.';$('gpsStatus').textContent='❌ '+m},{enableHighAccuracy:true,maximumAge:0,timeout:20000})}
 function addGpsPoint(){if(!lastGps){getPhoneLocation();return}$('sys').value='gmg';sysChanged();$('unit').value='m';$('unit').dataset.user='1';let n=parseInt($('npts').value)||4;if(n>=100){$('gpsStatus').textContent='❌ The maximum of 100 points has been reached.';return}let target=0;for(let i=1;i<=n;i++){if($('x'+i).value.trim()===''&&$('y'+i).value.trim()===''){target=i;break}}if(!target){n++;$('npts').value=n;makePoints();target=n}$('x'+target).value=lastGps.x.toFixed(3);$('y'+target).value=lastGps.y.toFixed(3);$('gpsStatus').innerHTML+=' <b>Saved as P'+target+'.</b> Walk to the next location and capture again.';lastGps=null}
-function showPlot(){$('plot').style.display='block';$('map').style.display='none';}
-function showMap(){if(!R)calc();if(!R)return;$('satellitePage').classList.add('open');$('satellitePage').setAttribute('aria-hidden','false');if(!map){map=L.map('map',{zoomControl:true,preferCanvas:true}).setView([5.6,-0.2],15);
-const satellite=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,maxNativeZoom:18,attribution:'© Esri, Maxar, Earthstar Geographics, and the GIS User Community'});
-const street=L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap contributors'});
-satellite.addTo(map);
-L.control.layers({'Satellite / Esri World Imagery':satellite,'Street Map':street},null,{collapsed:false}).addTo(map);
-updateMap();}else{setTimeout(()=>{map.invalidateSize();updateMap();},150);}}
-function closeSatellite(){$('satellitePage').classList.remove('open');$('satellitePage').setAttribute('aria-hidden','true');$('plot').style.display='block';}
-function openGoogleSatellite(){if(!R)calc();if(!R)return;let ll=R.q.map(toLL);let lat=ll.reduce((a,p)=>a+p.lat,0)/ll.length;let lon=ll.reduce((a,p)=>a+p.lon,0)/ll.length;window.open('https://www.google.com/maps/@'+lat.toFixed(7)+','+lon.toFixed(7)+',18z/data=!3m1!1e3','_blank');}
-function updateMap(){if(!map||!R)return;markers.forEach(m=>map.removeLayer(m));markers=[];if(poly)map.removeLayer(poly);let ll=R.q.map(toLL);poly=L.polygon(ll,{color:'#ff0000',weight:3,fillOpacity:.25}).addTo(map);if(window.gridLayers){window.gridLayers.forEach(g=>map.removeLayer(g));}window.gridLayers=[];let gs=parseFloat($('grid').value),unitF=unitFactor();if(gs&&$('sys').value!=='ll'){let minx=Math.min(...R.q.map(p=>p.x)),maxx=Math.max(...R.q.map(p=>p.x)),miny=Math.min(...R.q.map(p=>p.y)),maxy=Math.max(...R.q.map(p=>p.y));let sourceGrid=gs*unitF;let x0=Math.floor(minx/sourceGrid)*sourceGrid,x1=Math.ceil(maxx/sourceGrid)*sourceGrid,y0=Math.floor(miny/sourceGrid)*sourceGrid,y1=Math.ceil(maxy/sourceGrid)*sourceGrid;for(let x=x0;x<=x1;x+=sourceGrid){let a=toLL({x:x,y:miny}),b=toLL({x:x,y:maxy});window.gridLayers.push(L.polyline([[a.lat,a.lon],[b.lat,b.lon]],{color:'#ffff00',weight:1,opacity:.65}).addTo(map));}for(let y=y0;y<=y1;y+=sourceGrid){let a=toLL({x:minx,y:y}),b=toLL({x:maxx,y:y});window.gridLayers.push(L.polyline([[a.lat,a.lon],[b.lat,b.lon]],{color:'#ffff00',weight:1,opacity:.65}).addTo(map));}}if(window.contourLayers){window.contourLayers.forEach(l=>map.removeLayer(l));}window.contourLayers=[];if(window.contours&&$('contourMode').value!=='drawing'){window.contours.forEach(seg=>{let a=toLL({x:seg.a[0],y:seg.a[1]}),b=toLL({x:seg.b[0],y:seg.b[1]});window.contourLayers.push(L.polyline([[a.lat,a.lon],[b.lat,b.lon]],{color:'#8b4513',weight:2,opacity:.85}).addTo(map));});}ll.forEach((p,i)=>markers.push(L.marker([p.lat,p.lon]).addTo(map).bindTooltip('P'+(i+1))));map.fitBounds(poly.getBounds(),{padding:[40,40],maxZoom:18});setTimeout(()=>map.invalidateSize(),100);}
+function showPlot(){$('plot').style.display='block';}
+function showMap(){
+  const mapEl=$('map');
+  if(!mapEl)return;
+  mapEl.style.display='block';
+  if(!map){
+    map=L.map('map',{zoomControl:true,preferCanvas:true,zoomAnimation:true}).setView([5.6037,-0.1870],12);
+    const satellite=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{
+      maxZoom:19,maxNativeZoom:18,
+      attribution:'© Esri, Maxar, Earthstar Geographics, and the GIS User Community'
+    });
+    const street=L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
+      maxZoom:19,attribution:'© OpenStreetMap contributors'
+    });
+    satellite.on('tileerror',function(){
+      const st=$('mapStatus');
+      if(st)st.innerHTML='⚠️ Satellite imagery could not be loaded. Try the <b>Street Map</b> layer or check your internet connection.';
+    });
+    satellite.addTo(map);
+    L.control.layers({'🛰️ Satellite / Esri Imagery':satellite,'🗺️ Street Map':street},null,{collapsed:false}).addTo(map);
+    map.on('zoomend moveend',function(){ if(R) updateMapStatus(); });
+  }
+  setTimeout(function(){map.invalidateSize();if(R)updateMap();},120);
+}
+function closeSatellite(){}
+function updateMapStatus(){
+  const st=$('mapStatus');
+  if(!st)return;
+  if(!R){st.innerHTML='Your plotted site will appear here after PLOT & COMPUTE.';return;}
+  st.innerHTML='✅ Page 1 plot loaded: <b>'+R.q.length+' survey points</b>. The red boundary and P1–P'+R.q.length+' are positioned on the satellite imagery.';
+}
+function showPlottedSiteOnMap(){
+  try{
+    if(!R){
+      calc();
+      if(!R){return;}
+    }
+    showMap();
+    setTimeout(function(){
+      updateMap();
+      const page=$('page3');
+      if(page && !page.classList.contains('active'))showPage(3);
+      setTimeout(function(){if(map){map.invalidateSize();updateMap();}},180);
+    },160);
+  }catch(e){
+    const st=$('mapStatus');
+    if(st)st.textContent='❌ '+e.message;
+  }
+}
+function openGoogleSatellite(){
+  if(!R)calc();
+  if(!R)return;
+  let ll=R.q.map(toLL);
+  let lat=ll.reduce((a,p)=>a+p.lat,0)/ll.length;
+  let lon=ll.reduce((a,p)=>a+p.lon,0)/ll.length;
+  window.open('https://www.google.com/maps/@?api=1&map_action=map&center='+lat.toFixed(7)+','+lon.toFixed(7)+'&zoom=18&basemap=satellite','_blank');
+}
+function updateMap(){
+  if(!map)return;
+  const hint=$('mapHint');
+  if(!R){if(hint)hint.style.display='block';updateMapStatus();return;}
+  if(hint)hint.style.display='none';
+  markers.forEach(m=>map.removeLayer(m));markers=[];
+  if(poly)map.removeLayer(poly);
+  let ll;
+  try{ll=R.q.map(toLL);}catch(e){const st=$('mapStatus');if(st)st.textContent='❌ Could not convert the plotted coordinates to WGS84 for the map: '+e.message;return;}
+  if(!ll.length)return;
+  poly=L.polygon(ll,{color:'#ff0000',weight:4,fillOpacity:.22}).addTo(map);
+  if(window.gridLayers){window.gridLayers.forEach(g=>map.removeLayer(g));}
+  window.gridLayers=[];
+  let gs=parseFloat($('grid').value),unitF=unitFactor();
+  if(gs&&$('sys').value!=='ll'){
+    let minx=Math.min(...R.q.map(p=>p.x)),maxx=Math.max(...R.q.map(p=>p.x)),miny=Math.min(...R.q.map(p=>p.y)),maxy=Math.max(...R.q.map(p=>p.y));
+    let sourceGrid=gs*unitF;
+    let x0=Math.floor(minx/sourceGrid)*sourceGrid,x1=Math.ceil(maxx/sourceGrid)*sourceGrid,y0=Math.floor(miny/sourceGrid)*sourceGrid,y1=Math.ceil(maxy/sourceGrid)*sourceGrid;
+    for(let x=x0;x<=x1;x+=sourceGrid){let a=toLL({x:x,y:miny}),b=toLL({x:x,y:maxy});window.gridLayers.push(L.polyline([[a.lat,a.lon],[b.lat,b.lon]],{color:'#ffff00',weight:1,opacity:.65}).addTo(map));}
+    for(let y=y0;y<=y1;y+=sourceGrid){let a=toLL({x:minx,y:y}),b=toLL({x:maxx,y:y});window.gridLayers.push(L.polyline([[a.lat,a.lon],[b.lat,b.lon]],{color:'#ffff00',weight:1,opacity:.65}).addTo(map));}
+  }
+  if(window.contourLayers){window.contourLayers.forEach(l=>map.removeLayer(l));}
+  window.contourLayers=[];
+  if(window.contours&&$('contourMode').value!=='drawing'){
+    window.contours.forEach(seg=>{let a=toLL({x:seg.a[0],y:seg.a[1]}),b=toLL({x:seg.b[0],y:seg.b[1]});window.contourLayers.push(L.polyline([[a.lat,a.lon],[b.lat,b.lon]],{color:'#8b4513',weight:2,opacity:.85}).addTo(map));});
+  }
+  ll.forEach((p,i)=>{
+    const marker=L.circleMarker([p.lat,p.lon],{radius:6,color:'#ffffff',weight:2,fillColor:'#b5122f',fillOpacity:1}).addTo(map).bindTooltip('P'+(i+1),{permanent:false,direction:'top'});
+    markers.push(marker);
+  });
+  const bounds=poly.getBounds();
+  if(bounds.isValid())map.fitBounds(bounds,{padding:[30,30],maxZoom:18,animate:true});
+  updateMapStatus();
+  setTimeout(()=>map.invalidateSize(),120);
+}
 function pointElevations(){if(!R)return null;let z=R.q.map(p=>p.z);if(z.some(v=>v===null||!isFinite(v)))throw Error('Enter an elevation in metres for every point before generating contours.');return z;}
 function pointInPoly(x,y,q){let inside=false;for(let i=0,j=q.length-1;i<q.length;j=i++){let xi=q[i].x,yi=q[i].y,xj=q[j].x,yj=q[j].y,hit=((yi>y)!=(yj>y))&&(x<(xj-xi)*(y-yi)/(yj-yi)+xi);if(hit)inside=!inside;}return inside;}
 function idw(x,y,q,z){let num=0,den=0;for(let i=0;i<q.length;i++){let d=Math.hypot(x-q[i].x,y-q[i].y);if(d<1e-9)return z[i];let w=1/(d*d);num+=w*z[i];den+=w;}return num/den;}
@@ -211,5 +340,5 @@ save('ghana_site_plan.kml',k,'application/vnd.google-earth.kml+xml;charset=utf-8
 function dxf(){if(!R)calc();if(!R)return;let s='0\nSECTION\n2\nENTITIES\n';R.q.forEach((a,i)=>{let b=R.q[(i+1)%R.q.length];s+=`0\nLINE\n8\nSITE_BOUNDARY\n10\n${a.x}\n20\n${a.y}\n11\n${b.x}\n21\n${b.y}\n`});save('ghana_site_plan.dxf',s+'0\nENDSEC\n0\nEOF','application/dxf')}
 function report(){if(!R)calc();if(!R)return;let s=`GHANA SITE PLAN COMPUTATION REPORT\n\nCoordinate system: ${$('sys').selectedOptions[0].text}\nPoints: ${R.q.length}\nArea: ${(R.ar/(unitFactor()**2)).toFixed(3)} ${$('unit').value}2\nAcres: ${(R.ar/4046.8564224).toFixed(4)}\nPerimeter: ${(R.per/unitFactor()).toFixed(3)} ${$('unit').value}\n\n`;R.rows.forEach((r,i)=>s+=`P${i+1}-P${i===R.q.length-1?1:i+2}: ${(r.d/unitFactor()).toFixed(3)} ${$('unit').value}, ${r.br}, dX ${(r.dx/unitFactor()).toFixed(3)}, dY ${(r.dy/unitFactor()).toFixed(3)}\n`);save('ghana_site_plan_report.txt',s,'text/plain')}
 function demo(){ $('sys').value='utm';sysChanged();$('zone').value='30';$('hem').value='N';let d=[[512000,597800],[512120,597800],[512120,597680],[512000,597680]];$('npts').value=4;makePoints();d.forEach((p,i)=>{$('x'+(i+1)).value=p[0];$('y'+(i+1)).value=p[1];$('z'+(i+1)).value=[100,102,101,99][i]});calc()}
-setupThreePages();makePoints();makeConverterRows();sysChanged();demo();
+setupThreePages();makePoints();makeConverterRows();sysChanged();demo();setTimeout(()=>showMap(),120);
 </script></body></html>
