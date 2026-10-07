@@ -31,3 +31,14 @@ The coordinate entry panel includes phone GPS capture. GET MY LOCATION reads WGS
 - The tool remains a preliminary mapping/engineering aid; official cadastral work should use approved survey control and transformations.
 
 V21 UI update: the application is arranged into three pages — Plot & Compute, Field GPS & Converter, and Maps, Tools & Export. The visual theme uses a warm red/burgundy professional accent, with larger desktop/laptop controls while retaining a mobile-friendly layout. Existing coordinate, GPS, converter, contour, map, KML, DXF and report functions are retained.
+
+
+## Copyright and Attribution
+
+**Ghana Site Plan Plotter** is developed and authored by **Engr. Baah Lewis**.
+
+**© 2026 Engr. Baah Lewis. All Rights Reserved.**
+
+The software is made available free for public, educational, engineering and non-commercial use. Users may use and share the application provided that the author attribution and copyright notice remain intact. Removal or replacement of the author attribution is not permitted without written permission from the copyright holder.
+
+This notice identifies the copyright holder; it does not prevent lawful rights that cannot be waived under applicable copyright law. For formal commercial licensing or other permissions, contact the copyright holder.
