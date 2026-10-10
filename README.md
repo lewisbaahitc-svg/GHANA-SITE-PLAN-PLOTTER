@@ -35,9 +35,9 @@ V21 UI update: the application is arranged into three pages — Plot & Compute, 
 
 ## Copyright and Attribution
 
-**Ghana Site Plan Plotter** is developed and authored by **Engr. Baah Lewis**.
+**Ghana Site Plan Plotter** is created by **Engr. Lewis Baah**.
 
-**© 2026 Engr. Baah Lewis. All Rights Reserved.**
+**© 2026 Engr. Lewis Baah. All Rights Reserved.**
 
 The software is made available free for public, educational, engineering and non-commercial use. Users may use and share the application provided that the author attribution and copyright notice remain intact. Removal or replacement of the author attribution is not permitted without written permission from the copyright holder.
 
